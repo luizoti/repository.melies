@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.library.integration.tool" name="Library Integration Tool" version="0.8.16" provider-name="patrick-klein">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="xbmc.addon" version="18.9.701"/>
+    <import addon="script.module.beautifulsoup4" version="4.9.3"/>
+    <import addon="script.module.simplejson" version="3.17.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="kodi.context.item">
+    <menu id="kodi.core.main">
+      <item library="default.py">
+        <label>32154</label>
+        <visible>String.StartsWith(ListItem.Path,plugin) + !Container.Content(addons)</visible>
+      </item>
+      <item library="context.py">
+        <label>32000</label>
+        <visible>String.StartsWith(ListItem.Path,plugin) + !Container.Content(addons)</visible>
+      </item>
+      <item library="context2.py">
+        <label>32001</label>
+        <visible>String.StartsWith(ListItem.Path,plugin) + !Container.Content(addons)</visible>
+      </item>
+    </menu>
+  </extension>
+
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Allows video add-on content to be integrated into your library.</summary>
+    <description lang="en">
+Provides options in the context menu that lets you add any movie or TV show from video plugins into your library.  These videos will show up in your library and play just like any other local file.
+
+You can also sync all of the videos from plugins with a single click, so new videos are automatically available to your library, and old videos are removed.
+
+This tool gives you complete control over any custom metadata you want to use for your videos added from plugins.
+
+See the README for a full tutorial.
+    </description>
+    <disclaimer lang="en">Must run addon after version updates</disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license>GPL v2.0</license>
+    <forum>https://forum.kodi.tv/showthread.php?tid=327514</forum>
+    <website></website>
+    <source>https://github.com/patrick-klein/script.library.integration.tool</source>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+      <screenshot>resources/media/screenshot-01.jpg</screenshot>
+      <screenshot>resources/media/screenshot-02.jpg</screenshot>
+      <screenshot>resources/media/screenshot-03.jpg</screenshot>
+    </assets>
+    <news>v0.8.16 (2021-7-8)
+    </news>
+  </extension>
+
+</addon>
