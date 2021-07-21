@@ -4,3 +4,6 @@
 [submodule "matrix/skin.xperience1080"]
 	path = matrix/skin.xperience1080
 	url = https://github.com/luizoti/skin.xperience1080
+[submodule "matrix/plugin.video.crunchyroll"]
+	path = matrix/plugin.video.crunchyroll
+	url = https://github.com/luizoti/plugin.video.crunchyroll.git
