@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="repository.melies" name="Melies Addon repository" version="0.8" provider-name="luizoti">
+<addon id="repository.melies" name="Melies Addon repository" version="0.9" provider-name="luizoti">
     <extension point="xbmc.addon.repository" name="Example Repository">
         <dir>
             <info compressed="false">https://raw.githubusercontent.com/luizoti/repository.melies/master/matrix/zips/addons.xml</info>
@@ -134,7 +134,7 @@ See the README for a full tutorial.
 
 </addon>
 
-<addon id="plugin.video.crunchyroll" name="Crunchyroll" version="3.2.0" provider-name="MrKrabat">
+<addon id="plugin.video.crunchyroll" name="Crunchyroll" version="3.2.4" provider-name="MrKrabat">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.inputstreamhelper" version="0.3.3"/>
