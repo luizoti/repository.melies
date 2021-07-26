@@ -1,31 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="repository.melies" name="Melies Addon repository" version="0.9" provider-name="luizoti">
-    <extension point="xbmc.addon.repository" name="Example Repository">
-        <dir>
-            <info compressed="false">https://raw.githubusercontent.com/luizoti/repository.melies/master/matrix/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/luizoti/repository.melies/master/matrix/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/luizoti/repository.melies/master/matrix/zips/</datadir>
-        </dir>
-        <dir minversion="19.0.0">
-            <info compressed="false">https://raw.githubusercontent.com/luizoti/repository.melies/master/matrix/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/luizoti/repository.melies/master/matrix/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/luizoti/repository.melies/master/matrix/zips/</datadir>
-        </dir>
+<addon id="plugin.video.crunchyroll" name="Crunchyroll" version="3.2.4" provider-name="MrKrabat">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.inputstreamhelper" version="0.3.3"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary>Melies Addon repository</summary>
-        <description>Addon repo to store custon addons.</description>
-        <disclaimer></disclaimer>
         <platform>all</platform>
+        <language>en es pt fr de ar it ru</language>
+        <summary lang="en_GB">Watch videos from Crunchyroll.com!</summary>
+        <summary lang="de_DE">Schaue Videos von Crunchyroll.com!</summary>
+        <description lang="en_GB">Crunchyroll is an online video service and community that offers full-length episodes and movies of the very best in Japanese anime and Asian entertainment.</description>
+        <description lang="de_DE">Crunchyroll ist ein online Video-Streaming-Dienst und bietet Zugang zu vollen Episoden und Filmen der besten japanischen Anime und asiatischer Unterhaltung.</description>
+        <disclaimer lang="en_GB">WARNING: You MUST be a PREMIUM member to use this Plugin</disclaimer>
+        <disclaimer lang="de_DE">HINWEIS: Du MUSST PREMIUM Mitglied sein um dieses Plugin zu benutzen</disclaimer>
+        <news>v3.2.0 (2020.09.01)[CR]- Update for Kodi 19 Matrix</news>
+        <license>GNU Affero General Public License, v3</license>
+        <forum></forum>
+        <website>http://www.crunchyroll.com/</website>
+        <source>https://github.com/MrKrabat/plugin.video.crunchyroll</source>
+        <email></email>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
+            <screenshot>resources/media/screenshot-01.jpg</screenshot>
+            <screenshot>resources/media/screenshot-02.jpg</screenshot>
+            <screenshot>resources/media/screenshot-03.jpg</screenshot>
         </assets>
     </extension>
 </addon>
 
-<addon id="skin.xperience1080" version="8.9.1" name="Xperience1080" provider-name="xhaggi | krupama | luizoti">
+<addon id="skin.xperience1080" version="8.9.2" name="Xperience1080" provider-name="xhaggi | krupama | luizoti">
     <requires>
         <import addon="xbmc.gui" version="5.15.0" />
         <import addon="service.skin.widgets" version="0.0.33" />
@@ -76,12 +84,35 @@
     </extension>
 </addon>
 
-<addon id="script.library.integration.tool" name="Library Integration Tool" version="0.8.16" provider-name="patrick-klein">
+<addon id="repository.melies" name="Melies Addon repository" version="0.1.0" provider-name="luizoti">
+    <extension point="xbmc.addon.repository" name="Example Repository">
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/luizoti/repository.melies/master/matrix/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/luizoti/repository.melies/master/matrix/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/luizoti/repository.melies/master/matrix/zips/</datadir>
+        </dir>
+        <dir minversion="19.0.0">
+            <info compressed="false">https://raw.githubusercontent.com/luizoti/repository.melies/master/matrix/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/luizoti/repository.melies/master/matrix/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/luizoti/repository.melies/master/matrix/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Melies Addon repository</summary>
+        <description>Addon repo to store custon addons.</description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="script.library.integration.tool" name="Library Integration Tool" version="0.8.19" provider-name="luizoti|patrick-klein">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="xbmc.addon" version="18.9.701"/>
-    <import addon="script.module.beautifulsoup4" version="4.9.3"/>
-    <import addon="script.module.simplejson" version="3.17.0"/>
   </requires>
   <extension point="xbmc.python.script" library="default.py">
     <provides>executable</provides>
@@ -128,42 +159,8 @@ See the README for a full tutorial.
       <screenshot>resources/media/screenshot-02.jpg</screenshot>
       <screenshot>resources/media/screenshot-03.jpg</screenshot>
     </assets>
-    <news>v0.8.16 (2021-7-8)
+    <news>v0.8.19 (2021-7-26)
     </news>
   </extension>
-
-</addon>
-
-<addon id="plugin.video.crunchyroll" name="Crunchyroll" version="3.2.4" provider-name="MrKrabat">
-    <requires>
-        <import addon="xbmc.python" version="3.0.0"/>
-        <import addon="script.module.inputstreamhelper" version="0.3.3"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <language>en es pt fr de ar it ru</language>
-        <summary lang="en_GB">Watch videos from Crunchyroll.com!</summary>
-        <summary lang="de_DE">Schaue Videos von Crunchyroll.com!</summary>
-        <description lang="en_GB">Crunchyroll is an online video service and community that offers full-length episodes and movies of the very best in Japanese anime and Asian entertainment.</description>
-        <description lang="de_DE">Crunchyroll ist ein online Video-Streaming-Dienst und bietet Zugang zu vollen Episoden und Filmen der besten japanischen Anime und asiatischer Unterhaltung.</description>
-        <disclaimer lang="en_GB">WARNING: You MUST be a PREMIUM member to use this Plugin</disclaimer>
-        <disclaimer lang="de_DE">HINWEIS: Du MUSST PREMIUM Mitglied sein um dieses Plugin zu benutzen</disclaimer>
-        <news>v3.2.0 (2020.09.01)[CR]- Update for Kodi 19 Matrix</news>
-        <license>GNU Affero General Public License, v3</license>
-        <forum></forum>
-        <website>http://www.crunchyroll.com/</website>
-        <source>https://github.com/MrKrabat/plugin.video.crunchyroll</source>
-        <email></email>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-            <screenshot>resources/media/screenshot-01.jpg</screenshot>
-            <screenshot>resources/media/screenshot-02.jpg</screenshot>
-            <screenshot>resources/media/screenshot-03.jpg</screenshot>
-        </assets>
-    </extension>
 </addon>
 </addons>
