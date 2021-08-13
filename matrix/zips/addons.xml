@@ -84,7 +84,7 @@
     </extension>
 </addon>
 
-<addon id="repository.melies" name="Melies Addon repository" version="0.1.0" provider-name="luizoti">
+<addon id="repository.melies" name="Melies Addon repository" version="0.1.1" provider-name="luizoti">
     <extension point="xbmc.addon.repository" name="Example Repository">
         <dir>
             <info compressed="false">https://raw.githubusercontent.com/luizoti/repository.melies/master/matrix/zips/addons.xml</info>
@@ -109,7 +109,7 @@
     </extension>
 </addon>
 
-<addon id="script.library.integration.tool" name="Library Integration Tool" version="0.8.19" provider-name="luizoti|patrick-klein">
+<addon id="script.library.integration.tool" name="Library Integration Tool" version="0.8.23" provider-name="luizoti|patrick-klein">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="xbmc.addon" version="18.9.701"/>
@@ -159,7 +159,11 @@ See the README for a full tutorial.
       <screenshot>resources/media/screenshot-02.jpg</screenshot>
       <screenshot>resources/media/screenshot-03.jpg</screenshot>
     </assets>
-    <news>v0.8.19 (2021-7-26)
+    <news>v0.8.23 (2021-8-13)
+        fix: :bug: nfo creation problems
+        feat: :sparkles: added HBOMAX support
+        feat: :sparkles: added CRACKLE support
+        feat: :sparkles: added PARAMOUNTPLUS support
     </news>
   </extension>
 </addon>
