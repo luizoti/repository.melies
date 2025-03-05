@@ -33,7 +33,7 @@
     </extension>
 </addon>
 
-<addon id="repository.melies" name="Melies Addon repository" version="0.1.6" provider-name="luizoti">
+<addon id="repository.melies" name="Melies Addon repository" version="0.1.7" provider-name="luizoti">
     <extension point="xbmc.addon.repository" name="Example Repository">
         <dir>
             <info compressed="false">https://raw.githubusercontent.com/luizoti/repository.melies/master/matrix/zips/addons.xml</info>
@@ -58,68 +58,10 @@
     </extension>
 </addon>
 
-<addon id="script.library.integration.tool" name="Library Integration Tool" version="0.8.34" provider-name="luizoti">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="xbmc.addon" version="18.9.701"/>
-  </requires>
-  <extension point="xbmc.service" library="service.py" />
-  <extension point="xbmc.python.script" library="default.py">
-    <provides>executable</provides>
-  </extension>
-  <extension point="kodi.context.item">
-    <menu id="kodi.core.main">
-      <item library="default.py">
-        <label>32154</label>
-        <visible>String.StartsWith(ListItem.Path,plugin) + !Container.Content(addons)</visible>
-      </item>
-      <item library="context.py">
-        <label>32000</label>
-        <visible>String.StartsWith(ListItem.Path,plugin) + !Container.Content(addons)</visible>
-      </item>
-      <item library="context2.py">
-        <label>32001</label>
-        <visible>String.StartsWith(ListItem.Path,plugin) + !Container.Content(addons)</visible>
-      </item>
-    </menu>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Allows video add-on content to be integrated into your library.</summary>
-    <description lang="en">
-Provides options in the context menu that lets you add any movie or TV show from video plugins into your library.  These videos will show up in your library and play just like any other local file.
-
-You can also sync all of the videos from plugins with a single click, so new videos are automatically available to your library, and old videos are removed.
-
-This tool gives you complete control over any custom metadata you want to use for your videos added from plugins.
-
-See the README for a full tutorial.
-    </description>
-    <disclaimer lang="en">Must run addon after version updates</disclaimer>
-    <language></language>
-    <platform>all</platform>
-    <license>GPL v2.0</license>
-    <forum>https://forum.kodi.tv/showthread.php?tid=327514</forum>
-    <website></website>
-    <source>https://github.com/luizoti/script.library.integration.tool</source>
-    <assets>
-      <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
-      <screenshot>resources/media/screenshot-01.jpg</screenshot>
-      <screenshot>resources/media/screenshot-02.jpg</screenshot>
-      <screenshot>resources/media/screenshot-03.jpg</screenshot>
-    </assets>
-    <news>v0.8.34 (2021-8-13)
-        fix: :bug: nfo creation problems
-        feat: :sparkles: added HBOMAX support
-        feat: :sparkles: added CRACKLE support
-        feat: :sparkles: added PARAMOUNTPLUS support
-    </news>
-  </extension>
-</addon>
-
-<addon id="skin.xperience1080" version="8.9.2" name="Xperience1080" provider-name="xhaggi | krupama | luizoti">
+<addon id="skin.xperience1080" version="8.9.5" name="Xperience1080" provider-name="xhaggi | krupama | luizoti">
     <requires>
         <import addon="xbmc.gui" version="5.15.0" />
+        <import addon="service.skin.widgets" version="0.0.33" />
         <import addon="script.globalsearch" version="4.0.2" />
         <import addon="script.favourites" version="6.0.1" />
         <import addon="script.artistslideshow" version="1.8.2" />
@@ -127,7 +69,7 @@ See the README for a full tutorial.
         <import addon="resource.images.studios.white" version="0.0.1"/>
         <import addon="resource.images.musicgenreicons.grey" version="0.0.5"/>
         <import addon="resource.images.moviegenreicons.white" version="0.0.5"/>
-        <import addon="resource.images.weatherfanart.multi" version="0.0.6"/>
+        <!-- <import addon="resource.images.weatherfanart.multi" version="0.0.6"/> -->
     </requires>
     <extension point="xbmc.gui.skin" effectslowdown="0.80" debugging="false">
         <res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
