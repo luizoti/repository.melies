@@ -33,7 +33,7 @@
     </extension>
 </addon>
 
-<addon id="repository.melies" name="Melies Addon repository" version="0.1.8" provider-name="luizoti">
+<addon id="repository.melies" name="Melies Addon repository" version="0.1.9" provider-name="luizoti">
     <extension point="xbmc.addon.repository" name="Example Repository">
         <dir>
             <info compressed="false">https://raw.githubusercontent.com/luizoti/repository.melies/master/matrix/zips/addons.xml</info>
@@ -58,7 +58,7 @@
     </extension>
 </addon>
 
-<addon id="skin.xperience1080" version="10.0.0" name="Xperience1080" provider-name="xhaggi | krupama | luizoti">
+<addon id="skin.xperience1080" version="10.0.0-osd" name="Xperience1080" provider-name="xhaggi | krupama | luizoti">
     <requires>
         <import addon="xbmc.gui" version="5.17.0" />
         <import addon="script.globalsearch" version="9.0.7" />
