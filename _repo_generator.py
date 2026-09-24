@@ -279,6 +279,7 @@ def build_dir_entries(meta: dict, releases: dict) -> list:
         key=lambda kv: version_tuple(kv[1].get("minversion", "0.0.0")),
         reverse=True,
     )
+    explicit = []
     for name, rs in ordered:
         if rs.get("default"):
             continue
@@ -286,9 +287,17 @@ def build_dir_entries(meta: dict, releases: dict) -> list:
         if rs.get("maxversion"):
             attrs += f' maxversion="{rs["maxversion"]}"'
         entries.append(_dir_block(name, base, attrs))
+        explicit.append(rs)
     for name, rs in releases.items():
         if rs.get("default"):
-            entries.append(_dir_block(name, base, ""))
+            # cap the fallback dir below the lowest explicit minversion so that
+            # exactly one <dir> matches any given Kodi version (avoids the index
+            # being fetched twice and addons being listed twice)
+            attrs = ""
+            if explicit:
+                lowest = min(version_tuple(e["minversion"]) for e in explicit)
+                attrs = f' maxversion="{lowest[0] - 1}.99.99"'
+            entries.append(_dir_block(name, base, attrs))
     return entries
 
 

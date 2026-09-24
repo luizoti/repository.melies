@@ -32,7 +32,7 @@
       </assets>
     </extension>
   </addon>
-  <addon id="repository.melies" name="Melies Addon repository" version="0.1.11" provider-name="luizoti">
+  <addon id="repository.melies" name="Melies Addon repository" version="0.1.12" provider-name="luizoti">
     <extension point="xbmc.addon.repository" name="Example Repository">
       <dir minversion="22.0.0">
         <info compressed="false">https://raw.githubusercontent.com/luizoti/repository.melies/master/piers/zips/addons.xml</info>
@@ -44,7 +44,7 @@
         <checksum>https://raw.githubusercontent.com/luizoti/repository.melies/master/omega/zips/addons.xml.md5</checksum>
         <datadir zip="true">https://raw.githubusercontent.com/luizoti/repository.melies/master/omega/zips/</datadir>
       </dir>
-      <dir>
+      <dir maxversion="20.99.99">
         <info compressed="false">https://raw.githubusercontent.com/luizoti/repository.melies/master/matrix/zips/addons.xml</info>
         <checksum>https://raw.githubusercontent.com/luizoti/repository.melies/master/matrix/zips/addons.xml.md5</checksum>
         <datadir zip="true">https://raw.githubusercontent.com/luizoti/repository.melies/master/matrix/zips/</datadir>
