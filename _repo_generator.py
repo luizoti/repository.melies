@@ -183,9 +183,13 @@ def build_zip(addon_dir: Path, zip_path: Path):
         p for p in addon_dir.rglob("*")
         if p.is_file() and not _ignored(p, addon_dir)
     )
+    # Kodi packages must contain a single top-level folder named after the
+    # addon id (archive "zip://path/addon.id/" + addon.xml). Flat layouts are
+    # rejected by CAddonInstallJob ("invalid package").
+    prefix = addon_dir.name
     with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED) as zf:
         for f in files:
-            zi = zipfile.ZipInfo(f.relative_to(addon_dir).as_posix(), ZIP_EPOCH)
+            zi = zipfile.ZipInfo(f"{prefix}/{f.relative_to(addon_dir).as_posix()}", ZIP_EPOCH)
             zi.compress_type = zipfile.ZIP_DEFLATED
             zi.create_system = 3
             with f.open("rb") as fh:
