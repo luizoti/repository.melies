@@ -1,0 +1,36 @@
+# Melies repository — declarative config. Managed by _repo_generator.py.
+
+meta:
+  repository: luizoti/repository.melies
+  branch: master
+  repo_base: https://raw.githubusercontent.com/luizoti/repository.melies/master
+  repository_version: 0.1.11
+
+sources:
+  plugin.video.crunchyroll: https://github.com/luizoti/plugin.video.crunchyroll.git
+  script.library.integration.tool: https://github.com/luizoti/script.library.integration.tool.git
+  skin.xperience1080: https://github.com/luizoti/skin.xperience1080.git
+
+releases:
+  matrix:
+    display: "Kodi 19/20 (Matrix/Nexus)"
+    minversion: 19.0.0
+    gui_max: 5.14.0
+    python_min: 3.0.0
+    default: True
+  omega:
+    display: "Kodi 21 (Omega)"
+    minversion: 21.0.0
+    maxversion: 21.99.99
+    gui_min: 5.17.0
+    python_min: 3.0.0
+  piers:
+    display: "Kodi 22 (Piers)"
+    minversion: 22.0.0
+    gui_min: 5.17.0
+    python_min: 3.0.0
+
+trees:
+  matrix: [plugin.video.crunchyroll, script.library.integration.tool]
+  omega: [skin.xperience1080, plugin.video.crunchyroll, script.library.integration.tool]
+  piers: [skin.xperience1080, plugin.video.crunchyroll, script.library.integration.tool]

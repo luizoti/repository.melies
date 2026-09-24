@@ -1,0 +1,47 @@
+name: generate-repository
+
+on:
+  push:
+    branches: [master]
+    paths-ignore:
+      - "matrix/zips/**"
+      - "omega/zips/**"
+      - "piers/zips/**"
+      - "index.html"
+      - "addons.yaml"
+  workflow_dispatch:
+
+concurrency:
+  group: repo-generate
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install PyYAML
+        run: pip install pyyaml
+      - name: Generate repositories
+        run: python3 _repo_generator.py --all --force --clean --bump-repo
+      - name: Commit and push
+        run: |
+          git config core.autocrlf false
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A .
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore(repo): regenerate addon repositories"
+            git push
+          fi

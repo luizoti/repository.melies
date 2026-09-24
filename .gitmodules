@@ -1,9 +1,24 @@
-[submodule "matrix/script.library.integration.tool"]
-	path = matrix/script.library.integration.tool
-	url = https://github.com/luizoti/script.library.integration.tool
-[submodule "matrix/skin.xperience1080"]
-	path = matrix/skin.xperience1080
-	url = https://github.com/luizoti/skin.xperience1080
 [submodule "matrix/plugin.video.crunchyroll"]
 	path = matrix/plugin.video.crunchyroll
 	url = https://github.com/luizoti/plugin.video.crunchyroll.git
+[submodule "matrix/script.library.integration.tool"]
+	path = matrix/script.library.integration.tool
+	url = https://github.com/luizoti/script.library.integration.tool
+[submodule "omega/plugin.video.crunchyroll"]
+	path = omega/plugin.video.crunchyroll
+	url = https://github.com/luizoti/plugin.video.crunchyroll.git
+[submodule "omega/script.library.integration.tool"]
+	path = omega/script.library.integration.tool
+	url = https://github.com/luizoti/script.library.integration.tool
+[submodule "omega/skin.xperience1080"]
+	path = omega/skin.xperience1080
+	url = https://github.com/luizoti/skin.xperience1080
+[submodule "piers/plugin.video.crunchyroll"]
+	path = piers/plugin.video.crunchyroll
+	url = https://github.com/luizoti/plugin.video.crunchyroll.git
+[submodule "piers/script.library.integration.tool"]
+	path = piers/script.library.integration.tool
+	url = https://github.com/luizoti/script.library.integration.tool
+[submodule "piers/skin.xperience1080"]
+	path = piers/skin.xperience1080
+	url = https://github.com/luizoti/skin.xperience1080
