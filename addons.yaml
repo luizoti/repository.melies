@@ -4,7 +4,7 @@ meta:
   repository: luizoti/repository.melies
   branch: master
   repo_base: https://raw.githubusercontent.com/luizoti/repository.melies/master
-  repository_version: 0.1.12
+  repository_version: 0.1.13
 
 sources:
   plugin.video.crunchyroll: https://github.com/luizoti/plugin.video.crunchyroll.git
